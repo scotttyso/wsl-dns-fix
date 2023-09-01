@@ -30,3 +30,7 @@ Once the Script has configured the Environment you can execute the script each t
 ```bash
 fwdns.sh
 ```
+
+Credit to Christian Fersch for his wsl-sudo project
+
+## [WSL Sudo](https://github.com/Chronial/wsl-sudo)
