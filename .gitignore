@@ -1,0 +1,16 @@
+# Directories to Ignore
+**/tfe_modules/*
+
+# Local .terraform directories
+**/.terraform/*
+**/.secret
+**/terraform.tfvars
+**/.terraform.lock.hcl
+
+# Local Python Directories
+**/Testing*/*
+**/QA/*
+**/Logs/*
+**/PROD/*
+__pycache__/
+**/.DS_Store/*
