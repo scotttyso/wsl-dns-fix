@@ -1,4 +1,4 @@
-# Setup WSL Environment for Anyconnect
+# Setup WSL Environment for Anyconnect Network Changes
 
 ## Updates/News
 
@@ -6,6 +6,8 @@
 * Initial Release
 
 ## Instructions
+
+The purpose of this repository is to simplify the instructions into a simple `powershell` and `shell` script fix for users.  The other examples from GitHub below give instructions but not a quick `shell` script.  Also the `anyconnect.ps1` is more complex than other examples to account for `connected/disconnected` states for the corporate environment.
 
 The `generate_settings.sh` file in this repository will setup a WSL Environment for Users that utilize Anyconnect VPN.  Once the environment is setup, you can use `wdf.sh` to correct `resolv.conf` each time you connect and disconnect from your VPN Network.
 
@@ -41,7 +43,7 @@ Once the Script has configured the Environment you can execute the script each t
 wdf.sh
 ```
 
-You could add this to cron and have it auto run on startup or at given intervals if you wanted but I find that since I connect and disconnect based on things I am doing, it is just more convient to execute the script when I need to.
+You can add this to cron and have it auto run on startup, or at given intervals, if you want but I find that since I connect and disconnect based on things I am doing, it is just more convient to execute the script when I need to.
 
 If you run the script as sudo, the following error occurs:
 
@@ -53,7 +55,7 @@ It still works, but to eliminate the error I chose to have `wdf.sh` run as a reg
 
 **Trivia:** The name of the script stands for WSL DNS fix, and was chosen for auto-complete/tab to be as simple as possible.
 
-**Note:** You will recieve a User Account Control (UAC) prompt for the Administrative session created to modify the `AnyConnect` Network Interface Each time.  Both Windows `Administrative` access + `sudo` access in WSL is required to perform these fixes.
+**Note:** You will recieve a User Account Control (UAC) prompt for the Administrative session created to modify the `AnyConnect` Network Interface Each time.  Both Windows `Administrative` access + `sudo` access in WSL are required to perform these fixes.
 
 If you don't have `Administrative` access in Windows, you can request your IT organization to deploy the `anyconnect.ps1` script as an `OnConnect` script when AnyConnect is connected.
 
