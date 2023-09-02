@@ -19,7 +19,7 @@ git clone https://github.com/scotttyso/wsl-dns-fix
 
 ### Modify the Search Values in anyconnect.ps1
 
-In the Last line line of `anyconnect.ps1` are the DNS search values I used.  Modify this line to match your own search domain if desired, or leave it commented out.
+In the Last line of `anyconnect.ps1` are the DNS search values I used.  Modify this line to match your own search domain if desired, or leave it commented out.
 
 ```powershell
 #Add-Content -Path C:\Users\Public\resolv.conf -Value "search rich.ciscolabs.com cisco.com"
