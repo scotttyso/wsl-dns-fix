@@ -4,8 +4,8 @@ wget https://raw.githubusercontent.com/Chronial/wsl-sudo/master/wsl-sudo.py
 mv wsl-sudo.py /usr/bin/wsl-sudo.py
 pip3 install -r requirements.txt
 chmod 755 /usr/bin/wsl-sudo.py
-cp fwdns.sh /usr/bin/fwdns.sh
-chmod 755 /usr/bin/fwdns.sh
+cp wdf.sh /usr/bin/wdf.sh
+chmod 755 /usr/bin/wdf.sh
 cat > /etc/wsl.conf<< EOF
 [boot]
 systemd=true

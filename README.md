@@ -41,13 +41,17 @@ Once the Script has configured the Environment you can execute the script each t
 fwdns.sh
 ```
 
+You could add this to cron and have it auto run on startup or at given intervals if you wanted but I find that since I connect and disconnect based on things I am doing, it is just more convient to execute the script when I need to.
+
 If you run the script as sudo, the following error occurs:
 
 ```bash
 tcgetpgrp failed: Not a tty
 ```
 
-It still works, but to eliminate the error I chose to have the script run as a regular user and prompt for sudo credentials for the `resolv.conf` modifications.
+It still works, but to eliminate the error I chose to have `fwdns.sh` run as a regular user and prompt for sudo credentials for the `resolv.conf` modifications.  
+
+Trivia: The name of the script stands for WSL DNS fix, and was chosen for auto-complete/tab to be as simple as possible.
 
 Note: You will recieve a User Account Control (UAC) prompt for the Administrative session created to modify the `AnyConnect` Network Interface Each time.  Both Windows `Administrative` access + `sudo` access in WSL is required to perform these fixes.
 
